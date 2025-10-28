@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Workouts = () => {
   const codespace = process.env.REACT_APP_CODESPACE_NAME;
-  const endpoint = `https://${codespace}-8000.app.github.dev/api/workouts/`;
+  const endpoint = `https://${codespace}-8000.app.github.dev/workouts/`;
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
