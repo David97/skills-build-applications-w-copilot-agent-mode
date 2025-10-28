@@ -6,16 +6,19 @@ import Leaderboard from './components/Leaderboard';
 import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
-import logo from './logo.svg';
 
 function App() {
   return (
     <Router>
       <div className="App container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+          <img src={require('./octofitapp-small.png')} alt="OctoFit Logo" className="App-logo" />
           <Link className="navbar-brand" to="/">OctoFit Tracker</Link>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav mr-auto">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
               <li className="nav-item"><Link className="nav-link" to="/activities">Activities</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/leaderboard">Leaderboard</Link></li>
               <li className="nav-item"><Link className="nav-link" to="/teams">Teams</Link></li>
@@ -31,7 +34,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/users" element={<Users />} />
             <Route path="/workouts" element={<Workouts />} />
-            <Route path="/" element={<div><h2>Welcome to OctoFit Tracker!</h2></div>} />
+            <Route path="/" element={<div className="card p-3"><h2>Welcome to OctoFit Tracker!</h2></div>} />
           </Routes>
         </main>
       </div>

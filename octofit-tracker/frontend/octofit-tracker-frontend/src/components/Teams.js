@@ -16,13 +16,24 @@ const Teams = () => {
   }, [endpoint]);
 
   return (
-    <div>
-      <h2>Teams</h2>
-      <ul>
-        {teams.map((team, idx) => (
-          <li key={idx}>{team.name} ({team.universe})</li>
-        ))}
-      </ul>
+    <div className="card p-3">
+      <h2 className="card-title">Teams</h2>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Universe</th>
+          </tr>
+        </thead>
+        <tbody>
+          {teams.map((team, idx) => (
+            <tr key={idx}>
+              <td>{team.name}</td>
+              <td>{team.universe}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

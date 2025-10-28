@@ -1,10 +1,15 @@
+/* General App Styling */
 .App {
   text-align: center;
+  background-color: #f0f8ff; /* Light blue background */
+  color: #333; /* Dark text color */
 }
 
+/* Logo Styling */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-left: 10px; /* Add spacing to the left */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,8 +18,9 @@
   }
 }
 
+/* Header Styling */
 .App-header {
-  background-color: #282c34;
+  background-color: #4caf50; /* Green background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +30,74 @@
   color: white;
 }
 
+/* Link Styling */
 .App-link {
-  color: #61dafb;
+  color: #ff5722; /* Orange links */
+  text-decoration: none;
+}
+
+.App-link:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Menu Styling */
+.navbar {
+  background-color: #3f51b5; /* Indigo background */
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: #ffeb3b; /* Yellow on hover */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th {
+  background-color: #4caf50; /* Green header */
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Button Styling */
+button {
+  background-color: #008cba; /* Blue buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #005f73; /* Darker blue on hover */
+}
+
+/* Heading Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #3f51b5; /* Indigo headings */
 }
 
 @keyframes App-logo-spin {

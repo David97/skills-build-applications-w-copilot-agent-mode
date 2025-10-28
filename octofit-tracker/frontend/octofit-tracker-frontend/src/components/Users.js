@@ -16,13 +16,26 @@ const Users = () => {
   }, [endpoint]);
 
   return (
-    <div>
-      <h2>Users</h2>
-      <ul>
-        {users.map((user, idx) => (
-          <li key={idx}>{user.name} ({user.email}) - Team: {user.team?.name || 'Unknown'}</li>
-        ))}
-      </ul>
+    <div className="card p-3">
+      <h2 className="card-title">Users</h2>
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Team</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user, idx) => (
+            <tr key={idx}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+              <td>{user.team?.name || 'Unknown'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
