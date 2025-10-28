@@ -16,13 +16,30 @@ const Workouts = () => {
   }, [endpoint]);
 
   return (
-    <div>
-      <h2>Workouts</h2>
-      <ul>
-        {workouts.map((workout, idx) => (
-          <li key={idx}>{workout.name} - {workout.difficulty}</li>
-        ))}
-      </ul>
+    <div className="mt-4">
+      <h2 className="mb-4 text-primary">Workouts</h2>
+      <div className="card">
+        <div className="card-body">
+          <table className="table table-striped table-hover">
+            <thead className="table-dark">
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Difficulty</th>
+                <th scope="col">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {workouts.map((workout, idx) => (
+                <tr key={idx}>
+                  <td>{workout.name}</td>
+                  <td>{workout.difficulty}</td>
+                  <td>{workout.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };
